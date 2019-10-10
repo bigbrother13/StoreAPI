@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-	namespace :api do
+  namespace :api do
     namespace :v1 do
       resources :records
       resources :clients
@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   end
 
 
-  root to: "home#{index}"
+  root to: "home#index"
 end

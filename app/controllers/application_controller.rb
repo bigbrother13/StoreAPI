@@ -5,6 +5,10 @@ class ApplicationController < ActionController::API
 
   private
 
+    def current_user
+      @current_user ||= User.find(payload['user_id'])
+    end
+    
     def not_authorized
       render json: { error: 'Not not_authorized' }, status: :unauthorized
     end
